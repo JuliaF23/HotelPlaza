@@ -1,0 +1,38 @@
+﻿@model IEnumerable<HotelPlaza.Models.Hospede>
+
+@{
+    ViewData["Title"] = "Lista";
+}
+
+<h1>Lista</h1>
+
+<p>
+    <a asp-action="Adicionar">Adicionar um novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroReserva)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroReserva)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { })
+        </td>
+    </tr>
+}
+    </tbody>
+</table>
