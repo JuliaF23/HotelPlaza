@@ -1,7 +1,7 @@
 ﻿@model HotelPlaza.Models.Hospede
 
 @{
-    ViewBag["Title"] = "Detalhes";
+    ViewBag.Title = "Detalhes";
 }
 
 <h1>Detalhes</h1>
@@ -22,9 +22,15 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NumeroReserva)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
     </dl>
 </div>
 
 <div>
-    <a asp-action="Index1">Voltar para lista</a>
+    <a asp-action="Lista">Voltar para lista</a>
 </div>

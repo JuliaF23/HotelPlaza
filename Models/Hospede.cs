@@ -15,5 +15,7 @@
         public int Id {get; set;}
 
         public int NumeroReserva { get; set;}
+
+        public string Email { get; set;}
     }
 }
